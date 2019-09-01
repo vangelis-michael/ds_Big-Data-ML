@@ -124,8 +124,7 @@ FROM
 JOIN (
   SELECT
     fullvisitorid,
-  IF
-    (COUNTIF(totals.transactions > 0
+  IF(COUNTIF(totals.transactions > 0
         AND totals.newVisits IS NULL) > 0,
       1,
       0) AS will_buy_on_return_visit
